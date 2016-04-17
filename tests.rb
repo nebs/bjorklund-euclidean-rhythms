@@ -1,4 +1,4 @@
-require_relative 'src/euclid'
+require_relative 'src/bjorklund_euclid'
 
 class String
   def colorize(color_code)
