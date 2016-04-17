@@ -15,7 +15,7 @@ def E(k, n)
       end
     end
 
-    if !new_remainders.empty?
+    if new_remainders.any?
       bins.pop new_remainders.count
       remainders = new_remainders
     end
