@@ -1,27 +1,27 @@
 def E(k, n)
   bins = []
-  reserves = []
+  remainders = []
   k.times { |i| bins[i] = ['x'] }
-  (n-k).times { |i| reserves[i] = ['.'] }
+  (n-k).times { |i| remainders[i] = ['.'] }
 
   loop do
-    new_reserves = []
+    new_remainders = []
     bins.each_with_index do |bin, i|
-      if reserves.empty?
-        new_reserves.push bin
+      if remainders.empty?
+        new_remainders.push bin
       else
-        bin += reserves.shift
+        bin += remainders.shift
         bins[i] = bin
       end
     end
 
-    if !new_reserves.empty?
-      bins.pop new_reserves.count
-      reserves = new_reserves
+    if !new_remainders.empty?
+      bins.pop new_remainders.count
+      remainders = new_remainders
     end
 
-    break unless reserves.size > 1
+    break unless remainders.size > 1
   end
 
-  return (bins + reserves).flatten.join
+  return (bins + remainders).flatten.join
 end
