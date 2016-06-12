@@ -1,8 +1,12 @@
 def E(k, n)
+  return "" if n == 0 || k == 0
+
   bins = []
   remainders = []
   k.times { |i| bins[i] = ['x'] }
   (n-k).times { |i| remainders[i] = ['.'] }
+
+  return bins.flatten.join if n == k
 
   loop do
     new_remainders = []

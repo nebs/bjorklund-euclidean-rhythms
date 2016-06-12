@@ -44,6 +44,9 @@ test_cases = [
   { k:9, n:16,  e:"x.xx.x.x.xx.x.x."},
   { k:11, n:24, e:"x..x.x.x.x.x..x.x.x.x.x."},
   { k:13, n:24, e:"x.xx.x.x.x.x.xx.x.x.x.x."},
+  { k:5, n:5,   e:"xxxxx"},
+  { k:0, n:5,   e:""},
+  { k:5, n:0,   e:""},
 ]
 
 num_passes = 0
